@@ -73,10 +73,10 @@ public class SearchResults extends ListActivity {
             ConfigurationBuilder cb = new ConfigurationBuilder();
             Log.d(getClass().getSimpleName(), "ConfigurationBuilder");
             cb.setDebugEnabled(BuildConfig.DEBUG)
-                    .setOAuthConsumerKey("W8GmAeFhiPgJQorQeR2u04fAX")
-                    .setOAuthConsumerSecret("lqtqj31FTa8K3ZwJqtD80buHHfYc11QzgEKr9l0hCdwkkT7S0z")
-                    .setOAuthAccessToken("602173599-kF42sLKv3mhyUrtsS3D2lBShgedD09kTPxT29xIb")
-                    .setOAuthAccessTokenSecret("CvddjEVyQqYYD3zsFzZl7ldjnphTjp1ui3ykJfcEOcGKS");
+                    .setOAuthConsumerKey("--")
+                    .setOAuthConsumerSecret("--")
+                    .setOAuthAccessToken("--")
+                    .setOAuthAccessTokenSecret("--");
             TwitterFactory tf = new TwitterFactory(cb.build());
             Twitter t = tf.getInstance();
             Query query = new Query(params[0]);

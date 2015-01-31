@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tableLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:stretchColumns="*"
+    android:background="@android:color/white"
+    tools:context=".TwitterSearches">
+   
+   <!-- tableRow0 -->
+   <TableRow
+        android:id="@+id/tableRow0"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_span="2"
+          android:inputType="text"
+          android:id="@+id/queryEditText"
+          android:hint="@string/queryPrompt"
+          android:imeOptions="actionNext"/>
+   </TableRow>
+      
+   <!-- tableRow1 -->
+   <TableRow
+       android:id="@+id/tableRow1"
+       android:layout_height="wrap_content"
+       android:layout_width="match_parent">
+      <EditText
+          android:layout_height="wrap_content"
+          android:hint="@string/tagPrompt"
+          android:inputType="text"
+          android:id="@+id/tagEditText"
+          android:imeOptions="actionDone"
+          android:layout_gravity="center_vertical"/>
+      <Button
+          android:id="@+id/saveButton"
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:text="@string/save"/>
+   </TableRow>
+      
+   <!-- tableRow2 -->
+   <TableRow
+       android:id="@+id/tableRow2"
+       android:layout_height="wrap_content"
+       android:layout_width="match_parent"
+       android:background="@color/light_orange">
+      <TextView
+          android:layout_height="wrap_content"
+          android:id="@+id/taggedSearchesTextView"
+          android:text="@string/taggedSearches"
+          android:layout_width="match_parent"
+          android:layout_gravity="center_horizontal"
+          android:layout_span="2"
+          android:textSize="18sp"
+          android:textColor="@android:color/black"
+          android:padding="5dp"/>
+   </TableRow>
+      
+   <!-- tableRow3 -->
+   <TableRow
+       android:id="@+id/tableRow3"
+       android:background="@color/light_orange"
+       android:layout_height="wrap_content"
+       android:layout_width="match_parent"
+       android:layout_weight="1">
+      <ScrollView
+          android:id="@+id/queryScrollView"
+          android:layout_width="match_parent"
+          android:layout_span="2" android:padding="5dp">
+			<TableLayout android:id="@+id/queryTableLayout" 
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+                android:padding="5dp"
+			    android:stretchColumns="*"/>
+      </ScrollView>
+   </TableRow>
+      
+   <!-- tableRow4 -->
+   <TableRow
+       android:id="@+id/tableRow4"
+       android:layout_height="wrap_content"
+       android:layout_width="match_parent">
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/clearTags"
+          android:id="@+id/clearTagsButton"
+          android:layout_span="2"
+          android:layout_marginTop="5dp"/>
+   </TableRow> 
+</TableLayout>

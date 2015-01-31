@@ -197,7 +197,8 @@ public class TwitterSearches extends Activity {
          startActivity(webIntent); // execute the Intent
          */
 
-          Intent intent = new Intent(TwitterSearches.this , MainActivity.class);
+          Intent intent = new Intent(Intent.ACTION_SEARCH,null,getApplicationContext(),SearchResults.class);
+          intent.putExtra("query", query);
           startActivity(intent);
       } // end method onClick
    }; // end OnClickListener anonymous inner class
